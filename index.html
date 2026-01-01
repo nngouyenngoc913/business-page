@@ -1,99 +1,138 @@
 <!doctype html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Biểu mẫu khảo sát</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        .container {
-            width: 600px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        select {
-            width: 100%;
-            padding: 8px;
-        }
-        .thanks {
-            text-align: center;
-            font-style: italic;
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #2c7be5;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #1a5dc9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Biểu mẫu khảo sát</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .notice {
+      background-color: #fff3cd;
+      color: #856404;
+      border-left: 4px solid #ffc107;
+      padding: 12px 15px;
+      margin: 15px 0 25px;
+      font-size: 14px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .thanks {
+      text-align: center;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a5dc9;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Khảo sát về chất lượng</h1>
+  <div class="container">
+    <h1>Khảo sát về chất lượng</h1>
 
-        <form>
-            <!-- Câu hỏi 1 -->
-            <div class="question">
-                <label for="project">
-                    Câu 1: Bạn quan tâm nhất đến dự án hoặc đề tài nào?
-                </label>
-                <select name="project" id="project">
-                    <option value="">-- Vui lòng chọn --</option>
-                    <option value="legal">Legal Searching Analyst</option>
-                    <option value="accounting">Book-keeping Automation</option>
-                </select>
-            </div>
-
-            <!-- Câu hỏi 2 -->
-            <div class="question">
-                <label for="demo">
-                    Câu 2: Bạn đã theo dõi demo cho dự án nào?
-                </label>
-                <select name="demo" id="demo">
-                    <option value="">-- Vui lòng chọn --</option>
-                    <option value="legal_demo">
-                        Legal Searching Demo
-                    </option>
-                </select>
-
-                <p>
-                    Link demo:
-                    <a href="https://colab.research.google.com/drive/1iOyKyXzB6zp4CjJotQg1U4SPzr6W8QSN?usp=sharing" target="_blank">
-                        Xem trên Google Colab
-                    </a>
-                </p>
-            </div>
-
-            <!-- Nút gửi -->
-            <button type="submit">Gửi khảo sát</button>
-        </form>
-
-        <p class="thanks">
-            Cảm ơn bạn vì đã dành thời gian trả lời khảo sát!
-        </p>
+    <!-- LƯU Ý -->
+    <div class="notice">
+      <strong>Lưu ý:</strong> Dự án này chỉ mang tính chất tham khảo và
+      không có khả năng thay thế các quyết định mang tính
+      <em>professional</em>.
     </div>
+
+    <form>
+      <!-- Câu hỏi 1 -->
+      <div class="question">
+        <label for="project">
+          Câu 1: Bạn quan tâm nhất đến dự án hoặc đề tài nào?
+        </label>
+        <select name="project" id="project">
+          <option value="">-- Vui lòng chọn --</option>
+          <option value="legal">Legal Searching Analyst</option>
+          <option value="accounting">Book-keeping Automation</option>
+        </select>
+      </div>
+
+      <!-- Câu hỏi 2 -->
+      <div class="question">
+        <label for="demo">
+          Câu 2: Bạn đã theo dõi demo cho dự án nào?
+        </label>
+        <select name="demo" id="demo">
+          <option value="">-- Vui lòng chọn --</option>
+          <option value="legal_demo">Legal Searching Demo</option>
+        </select>
+
+        <p>
+          Link demo:
+          <a href="https://colab.research.google.com/drive/1iOyKyXzB6zp4CjJotQg1U4SPzr6W8QSN?usp=sharing" target="_blank">
+            Xem trên Google Colab
+          </a>
+        </p>
+      </div>
+
+      <!-- Câu hỏi 3 -->
+      <div class="question">
+        <label for="feedback">
+          Câu 3: Bạn hãy góp ý để giúp chúng tôi cải tiến thêm?
+        </label>
+        <textarea id="feedback" name="feedback" rows="4"
+          placeholder="Nhập góp ý của bạn tại đây..."></textarea>
+      </div>
+
+      <!-- Nút gửi -->
+      <button type="submit">Gửi khảo sát</button>
+    </form>
+
+    <p class="thanks">
+      Cảm ơn bạn vì đã dành thời gian trả lời khảo sát!
+    </p>
+  </div>
 </body>
+
 </html>
